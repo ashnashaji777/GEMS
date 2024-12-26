@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Landing Page</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/feature.css">
+  <link rel="stylesheet" href="styles/track.css">
+  <link rel="stylesheet" href="styles/review.css">
+  <link rel="stylesheet" href="styles/slide.css">
+
+
+
+</head>
+<body>
+  <header class="header-section">
+    <div class="logo-container">
+      <img src="assets/icons/logo.png" alt="College Logo" class="logo">
+    </div>
+    <div class="header-content">
+      <p>Admissions Open 2025</p>
+      <p><strong>Full Time MBA (Bangalore)</strong></p>
+    </div>
+    
+  </header>
+
+  <section class="dynamic-background">
+    <div class="left-content">
+      <h1 class="mba-title">MBA</h1>
+      <p class="learn-tagline">Earn While You Learn</p>
+      <p class="salary-tagline">Pay your course fee from your salary</p>
+    </div>
+    <div class="right-form">
+      <div class="form-container">
+        <h2>Register Now</h2>
+        <hr>
+        <form id="registration-form">
+          <input type="text" id="name" name="name" placeholder="Name*" required>
+          <input type="email" id="email" name="email" placeholder="Email*" required>
+          <input type="tel" id="phone" name="phone" placeholder="Phone*" pattern="[0-9]{10}" required>
+          <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="mba">MBA in Business Analysis </option>
+            <option value="mca">MBA in Digital Marketing</option>
+            <option value="bba">MBA in Financial Management</option>
+            <option value="bba">MBA in Human Resource Management</option>
+            <option value="bba">MBA in International Business Management</option>
+            <option value="bba">MBA in Retail Management</option>
+            <option value="bba">MBA in Event Management</option>
+            <option value="bba">MBA in Hospitality &travel Tourism</option>
+            <option value="bba">MBA in Healthcare &Hospital Management</option>
+            
+            
+
+          </select>
+          <select id="state" name="state" required>
+            <option value="">Select State</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="West Bengal">West Bengal</option>
+          </select>
+          <select id="city" name="city" required>
+            <option value="">Select City</option>
+            <option value="Agra">Agra</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Bhopal">Bhopal</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Dehradun">Dehradun</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Guwahati">Guwahati</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Indore">Indore</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Kochi">Kochi</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Patna">Patna</option>
+            <option value="Pune">Pune</option>
+            <option value="Ranchi">Ranchi</option>
+            <option value="Surat">Surat</option>
+            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+            <option value="Vadodara">Vadodara</option>
+            <option value="Vijayawada">Vijayawada</option>
+            <option value="Visakhapatnam">Visakhapatnam</option>
+            <option value="Warangal">Warangal</option>
+          </select>
+          
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="info-section">
+    <div class="info-box blue" onclick="showPopup('blue-popup')">
+        <div class="icon">
+            <img src="assets/icons/about icon.png" alt="Career Icon">
+          </div>
+      <h3>About</h3>
+      <p>GEMS B SCHOOL</p>
+      <button class="arrow-button">→</button>
+    </div>
+    <div class="info-box yellow" onclick="showPopup('yellow-popup')">
+        <div class="icon">
+            <img src="assets/icons/mba icon.png" alt="Learn Icon" style="text-align: right;">
+          </div>
+      <h3>MBA</h3>
+      <p>Courses</p>
+      <button class="arrow-button">→</button>
+    </div>
+    <div class="info-box orange" onclick="showPopup('orange-popup')">
+        <div class="icon">
+            <img src="assets/icons/eligibility icon.png" alt="Learn Icon">
+          </div>
+      <h3>Eligibility for</h3>
+      <p>MBA</p>
+      <button class="arrow-button">→</button>
+    </div>
+  </div>
+  
+  <!-- Popup Containers -->
+  <div id="blue-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('blue-popup')">&times;</span>
+      <img src="assets/icons/img4.jpg" alt="Career Opportunities Image" class="popup-image">
+      <h2 style="color: rgb(224, 160, 10);">About GEMS B SCHOOL</h2>
+      <p>
+        <b>GEMS B SCHOOL </b>was conceived back in 2006 by a bunch of industry professionals who
+         firmly believed that Management cannot be learnt in a classroom alone. To understand management concepts effectively, it must be learnt in a blended manner, partly in the Industry and the rest in the classroom. This led to GEMS B School’s pioneering the Earn While You Learn/ Work-Study programs in India, where students learn 70% of the course in the organization they work with and 30% in the classroom. GEMS B School is currently ranked in the top 25 business schools in India as per various ranking surveys, and their students work with over 350 companies in Bangalore.
+      </p>
+    </div>
+  </div>
+  
+  </div>
+  <div id="yellow-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('yellow-popup')">&times;</span>
+      <img src="assets/icons/img5.jpg" alt="Career Opportunities Image" class="popup-image">
+      <h2 style="color: rgb(224, 160, 10);">Full Time MBA</h2>
+      <p style="font-weight: bold;">
+        2-year Full Time Industry Synergised MBA course available in the following options: </p>
+        <br>
+        <div class="career-list">
+            <ul>
+              <li>Marketing Management</li>
+              <li>Financial Management</li>
+              <li>Human Resource Management</li>
+              <li>International Business Management</li>
+              <li>Information Technology Management</li>
+              <li>Retail Management</li>
+              <li>Business Analytics</li>
+              
+            </ul>
+            <ul>
+             <li>Event Management</li>
+              <li>Hospitality & Travel Tourism Management</li>
+              <li>Healthcare & Hospital Management</li>
+              <li>Logistics & Supply Chain Management</li>
+              <li>Digital Marketing</li>
+            </ul>
+          </div>
+    </div>
+  </div>
+  <div id="orange-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('orange-popup')">&times;</span>
+      <img src="assets/icons/img3.jpg" alt="Career Opportunities Image" class="popup-image">
+      <h2 style="color: rgb(224, 160, 10);">Eligibility For MBA</h2>
+      <p style="font-weight: bold;">
+        2-year Full Time Industry Synergised MBA course eligibility criteria: </p>
+        <br>
+        <div class="career-list">
+            <ul>
+             
+             <li>Students with Graduation in any stream can apply.</li> 
+              <li>awaiting their final year results can also apply.</li> 
+                <li>will have to clear the GEMS online admission test.</li> 
+              
+            </ul>
+           
+          </div>
+    </div>
+  </div>
+  
+  <section class="program-concepts">
+    <!-- Left Section -->
+    <div class="concept-left">
+      <h2>Program Concepts</h2>
+      <div class="orange-box">
+        <ul style="  list-style-type: disc; ">
+            <li>This is an Earn – Learn – Earn / Work – Study – Work Program.</li>
+            <li>Join the Industry Synergised MBA and get a Job placement immediately.</li>
+            <li>Work from Monday to Friday. Study on Saturdays and Sundays.</li>
+            <li>At the end of 2 years, get:
+                An MBA degree.
+                A PGP certification.
+                2 years of work experience
+              
+            </li>
+            <li>Job placement will be related to the chosen specialisation to enable:
+              
+                5 days practical exposure.
+                2 days classroom exposure.
+                70% practical learning and 30% theoretical learning.
+            
+            </li>
+            <li>Job placement will be full time and a full-time salary will be paid.</li>
+            <li>The MBA degree will be awarded by a UGC recognised and NAAC ‘A’ grade accredited Indian University.</li>
+            <li>The PGP certification will be awarded by GEMS B SCHOOL.</li>
+            <li>Fees is payable in 8 easy instalments.</li>
+            <li>Hostel accommodation is available on campus.</li>
+        </ul>
+      </div>
+      <img src="assets/icons/img2.jpg" alt="Overlapping Image" class="left-overlap-image">
+    </div>
+  
+    <!-- Right Section -->
+    <div class="concept-right">
+      <!-- Right-side Image -->
+      <img src="assets/icons/img1.jpg" alt="Right Top Image" class="right-top-image">
+      <div class="international-progression">
+        <h2>International Progression</h2>
+        <div class="progression-icons">
+          <img src="assets/icons/ad1.png" alt="Icon 1">
+          <img src="assets/icons/ad2.png" alt="Icon 2">
+          <img src="assets/icons/ad3.png" alt="Icon 3">
+        </div>
+      </div>
+      <div class="blue-box">
+        <ul style="  list-style-type: disc; ">
+            
+                <li>GEMS B SCHOOL’s strategic partnerships with reputed International Universities enable students enrolling for the Industry Synergised MBA program to progress into an MBA program at one of these International Universities.</li>
+                <li>GEMS B SCHOOL currently has International Pathway agreements with:
+                  
+                    University of Sunderland – UK
+                    Roosevelt University – USA
+                    La Trobe University – Australia
+                  
+                </li>
+                <li>Students can complete the first year of their MBA at GEMS B SCHOOL and progress to one of these Universities for the final year to get an MBA from that respective University.</li>
+                <li>The International progression is only for students who are interested in this option and is not mandatory for all.</li>
+                <li>Students enrolling for the Industry Synergised MBA have time up to one year to decide whether they would like to choose this option or not.</li>
+              
+              
+                
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="features-section">
+    <h2 class="section-heading">Salient <b style="color: orange;">Features</b></h2>
+    <div class="feature-cards">
+      <!-- Row 1 -->
+      <div class="feature-card">
+        <img src="assets/icons/wifi.png" alt="Icon 1" class="card-icon">
+        <h3 class="card-tagline">Wifi</h3>
+        <p class="card-description">Campus</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/faculty.png" alt="Icon 2" class="card-icon">
+        <h3 class="card-tagline">Faculty</h3>
+        <p class="card-description">From Industry</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/digital.png" alt="Icon 3" class="card-icon">
+        <h3 class="card-tagline">Digital</h3>
+        <p class="card-description">Library</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/team.png" alt="Icon 4" class="card-icon">
+        <h3 class="card-tagline">Team</h3>
+        <p class="card-description">Building</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/experimental.png" alt="Icon 5" class="card-icon">
+        <h3 class="card-tagline">Experiential</h3>
+        <p class="card-description">learning</p>
+      </div>
+      <br>
+      <!-- Row 2 -->
+      <div class="feature-card">
+        <img src="assets/icons/outbond.png" alt="Icon 6" class="card-icon">
+        <h3 class="card-tagline">Outbond</h3>
+        <p class="card-description">Workshops</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/creative.png" alt="Icon 7" class="card-icon">
+        <h3 class="card-tagline">Creative</h3>
+        <p class="card-description">Focus</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/industrial.png" alt="Icon 8" class="card-icon">
+        <h3 class="card-tagline">Industrial</h3>
+        <p class="card-description">Visits</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/highly.png" alt="Icon 9" class="card-icon">
+        <h3 class="card-tagline">Highly</h3>
+        <p class="card-description">Flexible</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/industry.png" alt="Icon 10" class="card-icon">
+        <h3 class="card-tagline">Industry</h3>
+        <p class="card-description">Relevent Curriculum
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="track-record-section" style="background-image: url('assets/icons/img3.jpg');">
+    <div class="dark-violet-overlay">
+      <h2 class="section-heading" style="color: white;">Our Track Record</h2>
+      <div class="track-record-content">
+        <!-- First row (Numbers) -->
+        <div class="record-item">
+          <p class="number">1438</p>
+          <p class="label">Number of students</p>
+        </div>
+        <div class="record-item">
+          <p class="number">6509</p>
+          <p class="label">Alumni</p>
+        </div>
+        <div class="record-item">
+          <p class="number">6909</p>
+          <p class="label">Number of placements</p>
+        </div>
+        <div class="record-item">
+          <p class="number">425</p>
+          <p class="label">Corporate tie-ups</p>
+        </div>
+        <div class="record-item">
+          <p class="number">24</p>
+          <p class="label">Awards & Recognitions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-section">
+    <h2 class="section-heading">Why Learners Choose Our Program</h2>
+    <div class="reviews-container">
+      <div class="review-box" id="review1">
+        <p class="review-text">My name is Debi; I am from Bhubaneswar. It has been a pleasant experience here at GEMS B School. I was delivered what I was promised. I joined the college, sent for interviews and cracked backing with some genuine referrals from my management team. I am sure one can expect turn of events around here. One would certainly get what one has hoped for. If anyone is planning to 
+          join Gems B School, I am sure you are heading in the right direction. Good Luck.</p>
+        <div class="reviewer-info">
+          <img src="assets/images/person1.jpg" alt="Person 1" class="reviewer-photo">
+          <br><br>
+          <div class="reviewer-details">
+            <h4>Debi Prasad Dash
+
+              </h4>
+            <p>American Express Services India Ltd.</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-box" id="review2">
+        <p class="review-text">"Thank you GEMS B school for initiating this program. I am glad to be a part of this reputed institution. The placement cell here has got excellent cooperation with various
+           companies which is of a great advantage for the students. Thank you again."</p>
+        <div class="reviewer-info">
+          <img src="assets/images/person2.jpg" alt="Person 2" class="reviewer-photo">
+          <div class="reviewer-details">
+            <h4>Prashant Kumar Singh</h4>
+            <p>JP MORGAN & CHASE</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-box" id="review3">
+        <p class="review-text">"My overall experience till date has been amazing, and the college is having an good infrastructure. Gems has provided me with a number of opportunities to grow and explore my skills. The emphasis on the education always helped me a lot. I have always found a positive and healthy environment and the teachers are highly supportive.
+
+          It has added a number of values to my life. The faculties are well qualified. The curriculum is well updated as per the latest industry requirement. Every year about 95% of the students get placed in our college placements. Students are recruited by top MNCs. I am highly thankful to Kunal,
+           Hari & Mr. Nehru Ji for providing me with an opportunity to be a part of your college."</p>
+        <div class="reviewer-info">
+          <img src="assets/images/person3.jpg" alt="Person 3" class="reviewer-photo">
+          <div class="reviewer-details">
+            <h4>Bharath vijay</h4>
+            <p>Paypal</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-box" id="review4">
+        <p class="review-text">"The best ever B-School where you can find highly experienced faculty and a supportive placement team. They train you and help you to get placed in one the reputed company depending on your completenceed. very
+          
+          The Earn and Learn program provided by GEMS B SCHOOL gives you a Full-time MBA with work experience where you can gain a good practical knowledge about the subject.
+          
+          & Mr. a.
+          
+          I would highly recommend you to join this B-Schooi as you can boost up your career with a good industrial exposure."</p>
+        <div class="reviewer-info">
+          <img src="assets/images/person4.jpg" alt="Person 4" class="reviewer-photo">
+          <div class="reviewer-details">
+            <h4>CHARAN TEJA</h4>
+            <p>Allegis Global Solutions</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-box" id="review5">
+        <p class="review-text">"I left my Job in search of finding an exciting career and joined GEMS B School. My experience with GEMS is beautiful. I just followed what hari sir instructed me and I've seen my career grow. Faculty here are very much
+           talented. Every day is a learning here. I'm thankful to GEMS"</p>
+        <div class="reviewer-info">
+          <img src="assets/images/person5.jpg" alt="Person 5" class="reviewer-photo">
+          <div class="reviewer-details">
+            <h4>Himabindu</h4>
+            <p>Accenture</p>
+          </div>
+        </div>
+      </div>
+      <div class="review-box" id="review6">
+        <p class="review-text">"Its a good program where we get a chance to work and understand the industry requirements as well as to learn the topics. And there is full time support from the college in case of studies as well as the placements. It's very easy for us to contact our placement coordinator to discuss any issues and there will be support 
+          from them. Its really a good environment here"</p>
+        <div class="reviewer-info">
+          <img src="assets/images/person6.jpg" alt="Person 6" class="reviewer-photo">
+          <div class="reviewer-details">
+            <h4>Madhu Smitha</h4>
+            <p>Larson & Turbo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dots-container">
+      <span class="dot" onclick="changeReview(0)"></span>
+      <span class="dot" onclick="changeReview(1)"></span>
+      <span class="dot" onclick="changeReview(2)"></span>
+    </div>
+  </section>
+  
+  
+
+
+  <section class="sliding-section">
+    <div class="sliding-container">
+      <div class="slide" id="slide1">
+        <h2 class="slide-heading">Awards</h2>
+        <p class="slide-description">GEMS B SCHOOL takes great pride in being recognised as one of the Best Education Brands in India 2023 by The Economic Times. We were felicitated by the Honourable Education Minister of the Government of Nagaland, Shri.
+           Temjen Imna Along at The Economic Times Best Education Brands 2023 Event organised at the Hyatt Regency, New Delhi, on 29th June 2023.</p>
+        <div class="slide-images">
+          <img src="assets/images/a1.jpg" alt="Photo 1">
+          <img src="assets/images/a2.jpg" alt="Photo 2">
+        </div>
+      </div>
+      <div class="slide" id="slide2">
+        <h2 class="slide-heading">Awards</h2>
+        <p class="slide-description">GEMS B SCHOOL received the prestigious ASSOCHAM award for the 'Most Preferred B School for Placements' nationally, at the ASSOCHAM 13th Higher 
+          Education, Skill and Livelihood Conclave conducted on 25th and 26th Feb 2020 in New Delhi.</p>
+        <div class="slide-images">
+          <img src="assets/images/a3.jpg" alt="Photo 3">
+          <img src="assets/images/a4.jpg" alt="Photo 4">
+        </div>
+      </div>
+      <div class="slide" id="slide3">
+        <h2 class="slide-heading">Awards</h2>
+        <p class="slide-description">GEMS B SCHOOL-Bangalore received the prestigious ASSOCHAM award for 'The most preferred B-School of the year in South India' from Sri. Suresh Prabhu,
+           Central Minister for Commerce and Industry and Civil Aviation, Government of India.</p>
+        <div class="slide-images">
+          <img src="assets/images/a5.jpg" alt="Photo 5">
+          <img src="assets/images/a6.jpg" alt="Photo 6">
+        </div>
+      </div>
+      <div class="slide" id="slide4">
+        <h2 class="slide-heading">Awards</h2>
+        <p class="slide-description">GEMS B SCHOOL was recognised as 'The Most Innovative Business School in South India at the 
+          Times Business Awards 2020, organised virtually by Times of India on 5th October 2020.</p>
+        <div class="slide-images">
+          <img src="assets/images/a7.jpg" alt="Photo 7">
+          
+        </div>
+      </div>
+      <div class="slide" id="slide5">
+        <h2 class="slide-heading">Awards</h2>
+        <p class="slide-description">GEMS B SCHOOL was recognised as the 'B School of the year' at the 
+          ASSOCHAM 15th International Education Leadership & Skill Development Summit held on the 13th of May 2022.</p>
+        <div class="slide-images">
+          <img src="assets/images/a8.jpg" alt="Photo 9">
+          <img src="assets/images/a9.jpg" alt="Photo 10">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="white-background-section">
+    <h2 class="section-heading">Learn from <b style="color: orange;">Bangalore's Top Ranked BSchool</b></h2>
+    <div class="image-container">
+      <img src="assets/images/b1.png" alt="Your Image Description" class="centered-image">
+    </div>
+  </section>
+  
+  <section class="image-carousel-section">
+    <h2 class="section-heading">Placements</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item"><img src="assets/images/p1.jpg" alt="Image 1"></div>
+        <div class="carousel-item"><img src="assets/images/p2.jpg" alt="Image 2"></div>
+        <div class="carousel-item"><img src="assets/images/p3.jpg" alt="Image 3"></div>
+        <div class="carousel-item"><img src="assets/images/p4.jpg" alt="Image 4"></div>
+        <div class="carousel-item"><img src="assets/images/p5.jpg" alt="Image 5"></div>
+        <div class="carousel-item"><img src="assets/images/p6.jpg" alt="Image 6"></div>
+        <div class="carousel-item"><img src="assets/images/p7.jpg" alt="Image 7"></div>
+        <div class="carousel-item"><img src="assets/images/p8.jpg" alt="Image 8"></div>
+        <!-- Repeated images -->
+        <div class="carousel-item"><img src="assets/images/p1.jpg" alt="Image 1"></div>
+        <div class="carousel-item"><img src="assets/images/p2.jpg" alt="Image 2"></div>
+        <div class="carousel-item"><img src="assets/images/p3.jpg" alt="Image 3"></div>
+        <div class="carousel-item"><img src="assets/images/p4.jpg" alt="Image 4"></div>
+        <div class="carousel-item"><img src="assets/images/p5.jpg" alt="Image 5"></div>
+        <div class="carousel-item"><img src="assets/images/p6.jpg" alt="Image 6"></div>
+        <div class="carousel-item"><img src="assets/images/p7.jpg" alt="Image 7"></div>
+        <div class="carousel-item"><img src="assets/images/p8.jpg" alt="Image 8"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section">
+    <p class="footer-text">
+      Great Eastern Management School, Royal Cottage, The Bangalore Palace, Vasanthnagar, Bangalore - 560052
+    </p>
+    <p class="footer-text">
+      © Copyright 2024 GEMS B SCHOOL | All Rights Reserved.
+    </p>
+  </footer>
+  
+  
+  
+  
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.reviews-section {
+  background-color: #f8f8f8;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.review-box {
+  background-color: #ff7f00;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  width: 45%; /* Equal size for both cards */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.review-box.active {
+  display: flex;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+}
+
+.reviewer-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dots-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ff7f00;
+}
