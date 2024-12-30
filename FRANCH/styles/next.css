@@ -1,0 +1,96 @@
+/* Highlight Section */
+.highlight-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #dbeafe, #ffffff); /* Light blue to white gradient */
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.highlight-left {
+    flex: 1;
+    color: #1d3557; /* Dark blue text */
+    text-align: left;
+}
+
+.highlight-left h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.highlight-left p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #d62828; /* Red button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #b32424; /* Darker red on hover */
+}
+
+.highlight-right {
+    flex: 1;
+    text-align: center;
+}
+
+.highlight-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .highlight-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .highlight-left {
+        text-align: center;
+    }
+
+    .cta-button {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+/* Strength Section Styling */
+.strength-section {
+    background-color: #112796;
+
+    /*background: linear-gradient(to bottom, #e0f7fa, #ffffff);  Light blue to white gradient */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.strength-content h1 {
+    font-size: 36px;
+    color: white; /* Dark blue color for the heading */
+    margin-bottom: 15px;
+}
+
+.strength-content p {
+    font-size: 18px;
+    color: white; /* Dark gray text for description */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto; /* Center-align the text */
+}

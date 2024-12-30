@@ -1,0 +1,156 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Section Below the Header 
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+    position: relative;
+    min-height: 400px; 
+    flex-wrap: wrap; 
+}*/
+.left-content .tagline {
+    margin-top: 5px; /* Adjust space below the heading */
+    font-size: 28px; /* Set the font size for the tagline */
+    color: white; /* Set a subtle color for the tagline */
+    font-style: italic; /* Add an italicized style */
+}
+
+/* Adjusting the Eduworld Photo */
+.eduworld-photo {
+    margin-top: 20px; /* Add spacing above the image */
+    width: 140%; /* Adjust the width to match the form container, considering padding */
+    max-width: none; /* Remove max width restriction */
+    border-radius: 10px; /* Keep rounded corners */
+    display: block; /* Ensure proper display */
+    height: 450px;
+}
+
+/* Update the Parent Container for Alignment */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    background: url('assets/images/background.jpg') no-repeat center center/cover; /* Replace with the correct path */
+    padding: 40px 20px;
+    gap: 0; /* Remove gap between elements */
+    position: relative;
+    min-height: 400px; /* Ensure sufficient height */
+    flex-wrap: wrap; /* Handle wrapping for smaller screens */
+}
+
+
+
+.left-content {
+    flex: 1;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-container {
+    margin-top: 65px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light white shade */
+    padding: 20px;
+    border: 2px solid #1d3557; /* Blue border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 55%;
+}
+
+.form-container h3 {
+    font-size: 18px;
+    color: #1d3557; /* Blue heading */
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 14px;
+    background-color: #112796; /* Blue color */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #3a4892; /* Darker red on hover */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left-content {
+        text-align: center;
+    }
+
+    .form-container {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .info-section {
+        flex-direction: column;
+        gap: 20px; /* Add a smaller gap for stacking */
+    }
+
+    .left-content {
+        text-align: center;
+    }
+
+    .form-container {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .eduworld-photo {
+        width: 100%; /* Ensure full width on smaller screens */
+    }
+}

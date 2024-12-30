@@ -1,0 +1,130 @@
+/* Feature Section */
+.feature-section {
+    background: linear-gradient(to bottom, #dbeafe, #ffffff); /* Light blue to white gradient */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.feature-box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four boxes per row */
+    gap: 20px; /* Space between the boxes */
+    justify-items: center; /* Align the content of boxes to the center */
+    margin-bottom: 40px; /* Space below the boxes */
+}
+
+.feature-box {
+    background-color: red; /* White background for boxes */
+    border: 2px solid 	#800000; /* Blue border for boxes */
+    border-radius: 8px;
+    padding: 15px; /* Reduced padding for smaller boxes */
+    width: 250px; /* Adjusted width for four boxes in one row */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center-align text inside the box */
+}
+
+.feature-box h3 {
+    font-size: 18px; /* Smaller heading */
+    color: white; /* Dark blue text */
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 14px; /* Smaller description text */
+    color: white; /* Dark gray text */
+    line-height: 1.5;
+}
+
+.feature-heading h2 {
+    font-size: 32px;
+    color: #1d3557; /* Dark blue text */
+    margin-bottom: 20px;
+}
+
+.feature-heading p {
+    font-size: 18px;
+    color: #555; /* Medium gray text */
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .feature-box-container {
+        grid-template-columns: 1fr; /* One box per row on smaller screens */
+    }
+
+    .feature-box {
+        width: 90%; /* Adjust box width to be more responsive */
+    }
+}
+
+
+
+/* Investment Section */
+.investment-section {
+    background: linear-gradient(to bottom, #dbeafe, #ffffff); /* Light blue to white gradient */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.investment-heading h2 {
+    font-size: 32px;
+    color: white; /* White color for heading */
+    margin-bottom: 20px;
+    
+    background-color: red;
+}
+
+
+.investment-heading p {
+    font-size: 18px;
+    color: #555; /* Medium gray color for description */
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Investment Box */
+.investment-box {
+    background-color: #ffcc00; /* Yellow background */
+    color: black; /* Black text */
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #000; /* Black border */
+    border-radius: 12px;
+    text-align: center;
+    font-size: 18px;
+    width: 700px;
+}
+
+/* Align the rows */
+.investment-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Minimum 10px space between each word */
+    margin-bottom: 10px;
+}
+
+/* Ensure each word is aligned and spaced */
+.investment-row p {
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Ensure equal space for each word */
+}
+
+/* Ensure the second line of words is placed directly below the first line */
+.investment-box p {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .investment-box {
+        width: 90%;
+    }
+}
+
+.vertical-line {
+    border-left: 2px solid black; /* Set the border on the left to make the vertical line */
+    height: 70px; /* Adjust the height of the line */
+    margin-top: 10px;
+}

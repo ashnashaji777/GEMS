@@ -1,0 +1,66 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #ffffff; /* White background */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+   /* padding: 10px 20px;*/
+    border-bottom: 3px solid #ddd;
+}
+
+/* Logo Styling */
+header .logo img {
+    max-width: 100%; /* Ensure logo scales properly */
+    height: auto;
+    max-width: 500px; /* Suitable width for the logo */
+    /*margin-bottom: 2px;  Add spacing below the logo */
+}
+
+/* Heading Styling 
+header .heading {
+    text-align: center;
+    margin: 10px 0;
+}*/
+/*
+header .heading h1 {
+    font-size: 45px;
+    color: red;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Center the heading and adjust for small screen */
+    header .heading h1 {
+        font-size: 24px;
+    }
+
+    header .logo img {
+        max-width: 100px; /* Reduce logo size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .heading h1 {
+        font-size: 18px;
+    }
+
+    header .logo img {
+        max-width: 80px; /* Smaller logo for very small screens */
+    }
+}
