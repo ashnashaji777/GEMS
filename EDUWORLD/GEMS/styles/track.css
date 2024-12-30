@@ -1,0 +1,87 @@
+.full-screen-image-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Dark overlay to make the content more readable */
+  z-index: 1; /* Ensure overlay is above the image */
+}
+
+.container {
+  position: relative;
+  text-align: left;
+  z-index: 2; /* Ensure content is above the overlay */
+}
+
+.content-box {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  position: absolute;
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right side */
+}
+
+
+
+.section-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #0e0d0d;
+  margin-bottom: 20px;
+}
+
+.read-more-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #ff7f27; /* Button color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e66a1b; /* Darker shade on hover */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full section without stretching */
+  z-index: 0; /* Place image below the overlay and content */
+}
+
+@media (max-width: 768px) {
+  .content-box {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+}
