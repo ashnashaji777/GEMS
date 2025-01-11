@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>College Landing Page</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/feature.css">
+  <link rel="stylesheet" href="styles/track.css">
+  <link rel="stylesheet" href="styles/review.css">
+  <link rel="stylesheet" href="styles/faq.css">
+  <link rel="stylesheet" href="styles/placements.css">
+  <link rel="stylesheet" href="styles/newstyle.css">
+
+
+
+</head>
+<body>
+  <header class="header-section">
+    <div class="logo-container">
+        <img src="assets/icons/Eduworld Logo.jpeg" alt="College Logo" class="logo">
+    </div>
+    <!--<nav class="header-nav">
+      <ul>
+          <li><a href="#home">EARN & LEARN</a></li>
+         
+      </ul>
+  </nav>-->
+  <div class="header-content">
+    <p>Admissions Open 2025</p>
+    <p><strong>Full Time MBA (Bangalore)</strong></p>
+</div>
+
+    <!-- Added Navigation  
+     <a href="earn.html" class="earn-learn-link">EARN & LEARN</a>-->
+   
+</header>
+
+
+  <section class="dynamic-background">
+    <div class="content-wrapper">
+      <div class="left-content">
+        <h1 class="mba-title">MBA</h1>
+        <p class="learn-tagline">Earn & Learn
+          <br>2 Year Full Time MBA<br>
+          2 Year Full Time Job<br>
+          2 Year Salary<br>
+          2 Year Professional Experience
+        </p>
+        <p class="salary-tagline"></p>
+      </div>
+    </div>
+    
+    <div class="right-form">
+      <div class="form-container">
+        <h2>Register Now</h2>
+        <hr>
+        <form id="registration-form" >
+
+          <input type="text" id="name" name="name" placeholder="Name*" required>
+          <input type="email" id="email" name="email" placeholder="Email*" required>
+          <input type="tel" id="phone" name="phone" placeholder="Phone*" pattern="[0-9]{10}" required>
+          <select id="course" name="course" required>
+            <option value="">Select Course</option>
+            <option value="mba">MBA in Business Analysis </option>
+            <option value="bba">MBA in Finance</option>
+            <option value="bba">MBA in Marketing</option>
+            <option value="bba">MBA in HR</option>
+            <option value="bba">MBA in Entrepreneurship</option>
+            <option value="bba">MBA in Production and Operations</option>
+            
+            
+
+          </select>
+          <label for="state">Select State</label>
+          <select id="state" name="state" required onchange="updateCities()">
+              <option value="">Select a State</option>
+              <option value="andhra-pradesh">Andhra Pradesh</option>
+              <option value="arunachal-pradesh">Arunachal Pradesh</option>
+              <option value="assam">Assam</option>
+              <option value="bihar">Bihar</option>
+              <option value="chhattisgarh">Chhattisgarh</option>
+              <option value="goa">Goa</option>
+              <option value="gujarat">Gujarat</option>
+              <option value="haryana">Haryana</option>
+              <option value="himachal-pradesh">Himachal Pradesh</option>
+              <option value="jharkhand">Jharkhand</option>
+              <option value="karnataka">Karnataka</option>
+              <option value="kerala">Kerala</option>
+              <option value="madhya-pradesh">Madhya Pradesh</option>
+              <option value="maharashtra">Maharashtra</option>
+              <option value="manipur">Manipur</option>
+              <option value="meghalaya">Meghalaya</option>
+              <option value="mizoram">Mizoram</option>
+              <option value="nagaland">Nagaland</option>
+              <option value="odisha">Odisha</option>
+              <option value="punjab">Punjab</option>
+              <option value="rajasthan">Rajasthan</option>
+              <option value="sikkim">Sikkim</option>
+              <option value="tamil-nadu">Tamil Nadu</option>
+              <option value="telangana">Telangana</option>
+              <option value="tripura">Tripura</option>
+              <option value="uttar-pradesh">Uttar Pradesh</option>
+              <option value="uttarakhand">Uttarakhand</option>
+              <option value="west-bengal">West Bengal</option>
+          </select>
+          
+          <label for="city">Select City</label>
+          <select id="city" name="city" required>
+              <option value="">Select a City</option>
+          </select>
+          
+          <script>
+          const stateCities = {
+              "andhra-pradesh": [
+                  "Visakhapatnam", "Vijayawada", "Guntur", "Nellore", "Tirupati", 
+                  "Kurnool", "Rajahmundry", "Kadapa", "Srikakulam", "Chittoor",
+                  "Eluru", "Ongole", "Machilipatnam", "Anantapur", "Proddatur"
+              ],
+              "arunachal-pradesh": [
+                  "Itanagar", "Naharlagun", "Pasighat", "Tawang", "Bomdila", 
+                  "Ziro", "Roing", "Tezu", "Along", "Daporijo"
+              ],
+              "assam": [
+                  "Guwahati", "Silchar", "Dibrugarh", "Jorhat", "Tinsukia", 
+                  "Tezpur", "Nagaon", "Dhubri", "Barpeta", "Goalpara"
+              ],
+              "bihar": [
+                  "Patna", "Gaya", "Bhagalpur", "Muzaffarpur", "Darbhanga", 
+                  "Purnia", "Begusarai", "Arrah", "Katihar", "Munger"
+              ],
+              "chhattisgarh": [
+                  "Raipur", "Bilaspur", "Durg", "Korba", "Rajnandgaon", 
+                  "Jagdalpur", "Raigarh", "Ambikapur", "Dhamtari", "Mahasamund"
+              ],
+              "goa": [
+                  "Panaji", "Margao", "Vasco da Gama", "Mapusa", "Ponda", 
+                  "Bicholim", "Canacona", "Sanquelim", "Tiswadi", "Mormugao"
+              ],
+              "gujarat": [
+                  "Ahmedabad", "Surat", "Vadodara", "Rajkot", "Gandhinagar", 
+                  "Bhavnagar", "Jamnagar", "Junagadh", "Porbandar", "Surendranagar"
+              ],
+              "haryana": [
+                  "Gurgaon", "Faridabad", "Panipat", "Ambala", "Karnal", 
+                  "Hisar", "Sonipat", "Rohtak", "Panchkula", "Yamunanagar"
+              ],
+              "himachal-pradesh": [
+                  "Shimla", "Manali", "Dharamshala", "Kullu", "Mandi", 
+                  "Solan", "Chamba", "Hamirpur", "Bilaspur", "Nahan"
+              ],
+              "jharkhand": [
+                  "Ranchi", "Jamshedpur", "Dhanbad", "Bokaro", "Deoghar", 
+                  "Hazaribagh", "Giridih", "Ramgarh", "Chaibasa", "Dumka"
+              ],
+              "karnataka": [
+                  "Bengaluru", "Mysuru", "Hubballi", "Mangaluru", "Belagavi", 
+                  "Davangere", "Ballari", "Vijayapura", "Shivamogga", "Tumakuru"
+              ],
+              "kerala": [
+                  "Thiruvananthapuram", "Kochi", "Kozhikode", "Thrissur", "Kollam", 
+                  "Alappuzha", "Palakkad", "Kannur", "Malappuram", "Pathanamthitta","Kottayam","Idukki","Eranakulam","Vayanad","Kasaragod"
+              ],
+              "madhya-pradesh": [
+                  "Bhopal", "Indore", "Gwalior", "Jabalpur", "Ujjain", 
+                  "Sagar", "Rewa", "Ratlam", "Satna", "Chhindwara"
+              ],
+              "maharashtra": [
+                  "Mumbai", "Pune", "Nagpur", "Nashik", "Aurangabad", 
+                  "Thane", "Solapur", "Amravati", "Kolhapur", "Sangli"
+              ],
+              "manipur": [
+                  "Imphal", "Churachandpur", "Thoubal", "Kakching", "Bishnupur", 
+                  "Senapati", "Ukhrul", "Moreh", "Tamenglong", "Jiribam"
+              ],
+              "meghalaya": [
+                  "Shillong", "Tura", "Jowai", "Nongpoh", "Williamnagar", 
+                  "Baghmara", "Nongstoin", "Mairang", "Cherrapunji", "Mawkyrwat"
+              ],
+              "mizoram": [
+                  "Aizawl", "Lunglei", "Serchhip", "Champhai", "Kolasib", 
+                  "Saiha", "Lawngtlai", "Mamit", "Bairabi", "Vairengte"
+              ],
+              "nagaland": [
+                  "Kohima", "Dimapur", "Mokokchung", "Wokha", "Tuensang", 
+                  "Zunheboto", "Mon", "Phek", "Longleng", "Kiphire"
+              ],
+              "odisha": [
+                  "Bhubaneswar", "Cuttack", "Rourkela", "Puri", "Sambalpur", 
+                  "Berhampur", "Balasore", "Baripada", "Bhadrak", "Jeypore"
+              ],
+              "punjab": [
+                  "Chandigarh", "Amritsar", "Ludhiana", "Jalandhar", "Patiala", 
+                  "Bathinda", "Hoshiarpur", "Mohali", "Moga", "Pathankot"
+              ],
+              "rajasthan": [
+                  "Jaipur", "Udaipur", "Jodhpur", "Kota", "Bikaner", 
+                  "Ajmer", "Alwar", "Bharatpur", "Pali", "Sikar"
+              ],
+              "sikkim": [
+                  "Gangtok", "Namchi", "Pelling", "Mangan", "Rangpo", 
+                  "Gyalshing", "Ravangla", "Yuksom", "Singtam", "Jorethang"
+              ],
+              "tamil-nadu": [
+                  "Chennai", "Coimbatore", "Madurai", "Tiruchirapalli", "Salem", 
+                  "Erode", "Tiruppur", "Vellore", "Thoothukudi", "Dindigul"
+              ],
+              "telangana": [
+                  "Hyderabad", "Warangal", "Nizamabad", "Khammam", "Karimnagar", 
+                  "Ramagundam", "Mahabubnagar", "Siddipet", "Adilabad", "Suryapet"
+              ],
+              "tripura": [
+                  "Agartala", "Dharmanagar", "Kailasahar", "Udaipur", "Amarpur", 
+                  "Khowai", "Belonia", "Teliamura", "Sonamura", "Sabroom"
+              ],
+              "uttar-pradesh": [
+                  "Lucknow", "Kanpur", "Varanasi", "Agra", "Allahabad", 
+                  "Meerut", "Ghaziabad", "Bareilly", "Aligarh", "Moradabad"
+              ],
+              "uttarakhand": [
+                  "Dehradun", "Nainital", "Haridwar", "Rishikesh", "Haldwani", 
+                  "Rudrapur", "Kashipur", "Mussoorie", "Roorkee", "Pithoragarh"
+              ],
+              "west-bengal": [
+                  "Kolkata", "Darjeeling", "Siliguri", "Asansol", "Durgapur", 
+                  "Howrah", "Kharagpur", "Bardhaman", "Malda", "Jalpaiguri"
+              ]
+          };
+          
+          
+          function updateCities() {
+              const state = document.getElementById("state").value;
+              const citySelect = document.getElementById("city");
+              citySelect.innerHTML = `<option value="">Select a City</option>`;
+              
+              if (state && stateCities[state]) {
+                  stateCities[state].forEach(city => {
+                      const option = document.createElement("option");
+                      option.value = city.toLowerCase().replace(/\s+/g, '-');
+                      option.textContent = city;
+                      citySelect.appendChild(option);
+                  });
+              }
+          }
+
+
+
+
+          
+          </script>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="info-section">
+    <div class="info-box blue" onclick="showPopup('blue-popup')">
+        <div class="icon">
+            <img src="assets/icons/about icon.png" alt="Career Icon">
+          </div>
+      <h3>About</h3>
+      <p>EDUWORLD</p>
+      <button class="arrow-button">→</button>
+    </div>
+    <div class="info-box yellow" onclick="showPopup('yellow-popup')">
+        <div class="icon">
+            <img src="assets/icons/mba icon.png" alt="Learn Icon" style="text-align: right;">
+          </div>
+      <h3>MBA</h3>
+      <p>Courses</p>
+      <button class="arrow-button">→</button>
+    </div>
+    <div class="info-box orange" onclick="showPopup('orange-popup')">
+        <div class="icon">
+            <img src="assets/icons/eligibility icon.png" alt="Learn Icon">
+          </div>
+      <h3>Eligibility for</h3>
+      <p>MBA</p>
+      <button class="arrow-button">→</button>
+    </div>
+  </div>
+  
+  <!-- Popup Containers -->
+  <div id="blue-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('blue-popup')">&times;</span>
+      <img src="assets/images/newpic1.jpg" alt="Career Opportunities Image" class="popup-image"  style="width: 85%;height: 300px;">
+      <h2 style="color: rgb(255, 81, 0);">About EDUWORLD</h2>
+      <p>
+        <b>EDUWORLD </b>A 2009 Established Student Centric Company which is focusing on overall 
+        development of the students in terms of Academic and Career. The Students will always have 
+        a dilemma whether to do job or Higher Studies after the Graduation. As the Industry looking for 
+        people who are not only hard working but who know smart work. Eduworld bringing an opportunity 
+        to the Indian Graduates to explore the studies along with a guaranteed income possibility where 
+        the graduates are working in Realtime in companies along with the full time Studies 
+      </p>
+    </div>
+  </div>
+  
+  </div>
+  <div id="yellow-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('yellow-popup')">&times;</span>
+      <img src="assets/images/newpic2.jpg"  alt="Career Opportunities Image" class="popup-image" style="width: 85%;height: 300px;">
+      <h2 style="color: rgb(224, 53, 10);">Full Time MBA</h2>
+      <p style="font-weight: bold;">The MBA is Categorized as Professional MBA where you are working in a company along with your studies </p>
+        <br>
+        <div class="career-list">
+            <ul>
+              <li>Marketing Management</li>
+              <li>Financial Management</li>
+              <li>Human Resource Management</li>
+              <li>Production and Operations</li>
+              <li>Entrepreneurship</li>
+              <li>Business Analytics</li>
+              
+            </ul>
+
+          </div>
+    </div>
+  </div>
+  <div id="orange-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('orange-popup')">&times;</span>
+      <img src="assets/images/newpic3.jpg" style="width: 80%;height: 300px; "alt=" Opportunities Image" class="popup-image">
+      <h2 style="color: rgb(252, 0, 0)">Eligibility For MBA</h2>
+      <p style="font-weight: bold;">
+        2-year Full Time Industry Synergised MBA course eligibility criteria: </p>
+        <br>
+        <div class="career-list">
+            <ul>
+             
+             <li>A pass in Graduation with at least 50 % Marks </li> 
+              <li>Student Waiting for the final results also can apply </li> 
+                <li>Clearing of Eduworld Aptitude Test</li> 
+              
+            </ul>
+           
+          </div>
+    </div>
+  </div>
+  <section class="program-concepts">
+    <!-- Left Section -->
+    <div class="concept-left">
+      <h2>Professional MBA</h2>
+      <div class="orange-box">
+        <ul style="  list-style-type: disc; ">
+            <li>2 Year Study & Work MBA Program Offered through Industrial Attachment </li>
+            <li>Student will be Placed in a Company </li>
+            <li>Student will be working from Monday to Friday</li>
+            <li>Student will be attending the classes on Saturday and Sunday </li>
+            <li> Student get a 2 Year Full Time MBA </li>
+            <li> Student get a 2 Year Real Time Experience</li>
+            <li>Student get 2 Year Full Time Salary</li>
+            <li>The MBA will be an Approved Regular AICTE Program</li>
+            <li> Fees Can be payable in 5 Installments</li>
+            <li> Campus in Bangalore City Centre</li>
+            <li>Just 2 KM from Bangalore MG Road</li>
+            <li>Just 600 Meter from Metro Station</li>
+      
+        </ul>
+      </div>
+      <img src="assets/images/ew2.jpg" alt="Overlapping Image"style="width: 100%;height: 50%;" class="left-overlap-image">
+    </div>
+  
+    <!-- Right Section -->
+    <div class="concept-right">
+      <!-- Right-side Image -->
+      <img src="assets/images/ew1.jpg" alt="Right Top Image" style="width: 90%;height: 50%;"class="right-top-image">
+      <div class="international-progression">
+        <h2>Normal MBA VS Professional MBA</h2>
+        <h1><p>.</p></h1>
+       
+      </div>
+      <div class="blue-box">
+        <ul style="  list-style-type: disc; ">
+            
+                <li>Communication Training</li>
+                 
+                  <li> 100 %  Placement Assistance</li>
+                    <li> 55 Case Studies</li>
+                      <li> Expert Faculty Team</li>
+                        <li> Mock Interviews</li>
+                          <li>Get a Regular MBA without Leaving the Job</li>
+                            <li> Company – Collaborative Program</li>
+                              <li> Industrial Visit</li>
+                                <li>Nurture Holistic Development</li> 
+                                  <li>Business Expertise </li>
+                                    <li>Inculcate Leadership Skills</li> 
+                                      <li>Expert Session</li>
+                                        <li>Corporate Ladder </li>
+                                          <li>Adventure Learning Program</li>
+                  
+                </li>
+                
+                
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses-section">
+    <div class="container1">
+      <h2 class="section-heading">Spacializations</h2>
+  
+      <div class="courses-grid">
+        <!-- Course 1 -->
+        <div class="course-box course-color-1">
+          <h3 class="course-title">Marketing</h3>
+          
+        </div>
+  
+        <!-- Course 2 -->
+        <div class="course-box course-color-2">
+          <h3 class="course-title" style="color: black;">HR</h3>
+          
+        </div>
+  
+        <!-- Course 3 -->
+        <div class="course-box course-color-3">
+          <h3 class="course-title">Business Analytics</h3>
+          
+        </div>
+  
+        <!-- Course 4 -->
+        <div class="course-box course-color-4">
+          <h3 class="course-title">Entrepreneurship</h3>
+          
+        </div>
+  
+        <!-- Course 5 -->
+        <div class="course-box course-color-5">
+          <h3 class="course-title">Operations Management</h3>
+          
+        </div>
+  
+        <!-- Course 6 -->
+        <div class="course-box course-color-6">
+          <h3 class="course-title">Finance</h3>
+         
+        </div>
+        
+  
+        <!-- Course 7 -->
+        
+
+
+
+
+
+      </div>
+      <br><br><br>
+
+      <div class="courses-grid">
+        <!-- Course 7 -->
+        <div class="course-box course-color-7">
+         <h3 class="course-title">Eligibility</h3>
+         <h5 class="course-title">Graduation with 50%</h5>
+       </div>
+ 
+       <!-- Course 8 -->
+       <div class="course-box course-color-8">
+         <h3 class="course-title">Duration</h3>
+         <h5 class="course-title">2 Year</h5>
+       </div>
+ 
+       <!-- Course 9 -->
+       <div class="course-box course-color-9">
+         <h3 class="course-title">Mode</h3>
+         <h5 class="course-title">Weekends</h5>
+       </div>
+
+     </div>
+
+
+
+     
+    </div>
+
+
+
+    
+  </section>
+
+
+
+  <section class="full-screen-image-section">
+    <div class="overlay"></div> <!-- Overlay on top of the image -->
+    <div class="container">
+      <div class="content-box" style=".content-box {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        position: absolute;
+        bottom: 20px; /* Distance from the bottom */
+        right: 20px; /* Distance from the right side */
+      }
+      
+      ">
+        <h2 class="section-heading">Study in Bangalore</h2>
+        <p class="section-description">
+          The multicultural vibe and dynamic spirit of Bengaluru make it the perfect city for ambitious minds looking to redefine success.
+           Explore what sets this city apart while pursuing an MBA at Eduworld, where innovation meets excellence.</p>
+       
+      </div>
+    </div>
+    <!-- Directly place the image in the HTML -->
+    <img src="assets/images/bang3.jpeg" alt="Full-screen Image" class="background-image">
+
+    <style>
+      .full-screen-image-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Make sure the section takes up the full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 1; /* Ensure overlay is above the image */
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+  width: 100%;
+  height: 100%;
+}
+
+.content-box {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  position: absolute;
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right side */
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1rem;
+  color: #0e0d0d;
+  margin-bottom: 20px;
+}
+
+.read-more-btn {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #ff7f27; /* Button color */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e66a1b; /* Darker shade on hover */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the full section without stretching */
+  z-index: 0; /* Place image below the overlay and content */
+}
+
+@media (max-width: 768px) {
+  .content-box {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-description {
+    font-size: 0.9rem;
+  }
+}
+
+    </style>
+  </section>
+  
+  
+  
+  
+  <section class="features-section">
+    <h2 class="section-heading">Salient <b style="color: rgb(255, 60, 0);">Features</b></h2>
+    <div class="feature-cards">
+      <!-- Row 1 -->
+      <div class="feature-card">
+        <img src="assets/icons/wifi.png" alt="Icon 1" class="card-icon">
+        <h3 class="card-tagline">Wifi</h3>
+        <p class="card-description">Campus</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/faculty.png" alt="Icon 2" class="card-icon">
+        <h3 class="card-tagline">Faculty</h3>
+        <p class="card-description">From Industry</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/digital.png" alt="Icon 3" class="card-icon">
+        <h3 class="card-tagline">Digital</h3>
+        <p class="card-description">Library</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/team.png" alt="Icon 4" class="card-icon">
+        <h3 class="card-tagline">Team</h3>
+        <p class="card-description">Building</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/experimental.png" alt="Icon 5" class="card-icon">
+        <h3 class="card-tagline">Experiential</h3>
+        <p class="card-description">learning</p>
+      </div>
+      <br>
+      <!-- Row 2 -->
+      <div class="feature-card">
+        <img src="assets/icons/outbond.png" alt="Icon 6" class="card-icon">
+        <h3 class="card-tagline">Outbond</h3>
+        <p class="card-description">Workshops</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/creative.png" alt="Icon 7" class="card-icon">
+        <h3 class="card-tagline">Creative</h3>
+        <p class="card-description">Focus</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/industrial.png" alt="Icon 8" class="card-icon">
+        <h3 class="card-tagline">Industrial</h3>
+        <p class="card-description">Visits</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/highly.png" alt="Icon 9" class="card-icon">
+        <h3 class="card-tagline">Highly</h3>
+        <p class="card-description">Flexible</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/icons/industry.png" alt="Icon 10" class="card-icon">
+        <h3 class="card-tagline">Industry</h3>
+        <p class="card-description">Relevent Curriculum
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2 class="faq-heading">FAQ</h2>
+  
+    <div class="faq-container">
+      <div class="faq-row">
+        <!-- FAQ Question 1 -->
+        <div class="faq-box">
+          <h3 class="faq-question">What is the MBA Professional Program?</h3>
+          <span class="faq-toggle">&#x25BC;</span>
+          <p class="faq-answer">The MBA Professional Program is a specially designed MBA program for people who want to take challenges in life by working in companies along with their studies. This gives them a real opportunity to understand the real working atmosphere before completing the MBA.</p>
+        </div>
+  
+        <!-- FAQ Question 2 -->
+        
+      </div>
+      <div class="faq-row">
+        <div class="faq-box">
+          <h3 class="faq-question">How is the Professional MBA different from Normal MBA?</h3>
+          <span class="faq-toggle">&#x25BC;</span>
+          <p class="faq-answer">In a normal MBA, you spend two years in the classroom, and after that, you may be ready for placement or industries. However, in a Professional MBA, you are learning and simultaneously experiencing the work atmosphere in MNCs, corporates, Pvt Ltd companies, and organizations.</p>
+        </div>
+      </div>
+
+<!-- FAQ Question 3 -->
+      <div class="faq-row">
+        <div class="faq-box">
+          <h3 class="faq-question">What is the duration of Professional MBA?</h3>
+          <span class="faq-toggle">&#x25BC;</span>
+          <p class="faq-answer">The duration is two years. In the first three months, you will be in the classroom, and for the next 1.8 years, you will be working in companies.</p>
+        </div>
+  
+      </div>
+  
+      <!-- FAQ Question 4 -->
+      <div class="faq-row">
+        <div class="faq-box">
+          <h3 class="faq-question">What are the major benefits of Professional MBA?</h3>
+          <span class="faq-toggle">&#x25BC;</span>
+          <p class="faq-answer">The student earns the following four advantages:
+            1.	2 Year Full Time MBA
+            2.	1.9 Year  Full Time Experience 
+            3.	1.9  Year Full Salary
+            4.	You will be placed as Senior Level after completing of your MBA
+            
+          </p>
+        </div>
+  
+      </div>
+    
+
+      <!-- FAQ Question 5 -->
+      <div class="faq-row">
+        <div class="faq-box">
+          <h3 class="faq-question">What are the specializations available in the MBA Professional Program?</h3>
+          <span class="faq-toggle">&#x25BC;</span>
+          <p class="faq-answer">
+            1. Marketing<br>
+            2. HR<br>
+            3. Finance<br>
+            4. Healthcare Management<br>
+            5. Banking, Finance, Insurance<br>
+            6. Start-ups and SMEs<br>
+            7. Business Analytics
+          </p>
+        </div>
+  
+      </div>
+
+
+
+       <!-- FAQ Question 6 -->
+       <div class="faq-row">
+        <div class="faq-box">
+          <h3 class="faq-question">Can direct admission be possible?</h3>
+          <span class="faq-toggle">&#x25BC;</span>
+          <p class="faq-answer">A screening test will be conducted for getting admissions to the MBA Professional program.</p>
+        </div>
+  
+      </div>
+  
+
+
+       <!-- FAQ Question 7-->
+       <div class="faq-row">
+        <div class="faq-box">
+          <h3 class="faq-question">Do you provide educational loan facilities?</h3>
+          <span class="faq-toggle">&#x25BC;</span>
+          <p class="faq-answer">Yes, once you clear the selection process and take admission, you will receive educational loan assistance from Eduworld.</p>
+        </div>
+  
+      </div>
+ <!-- FAQ Question 8-->
+ <div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">Where will the classes be conducted?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">The classes will be conducted at the college with all necessary facilities.</p>
+  </div>
+
+</div>
+
+
+ <!-- FAQ Question 9-->
+ <div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">How Many Hours the students should work ?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Its Depends on the Company the students work. It can be from 6 to 9 Hours per day
+
+      .</p>
+  </div>
+</div>
+
+
+<!-- FAQ Question 10-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">Can student do PhD after the MBA ?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">100 % Student can do the PhD after the MBA and It’s a AICTE Approved MBA .</p>
+  </div>
+</div>
+
+
+<!-- FAQ Question 11-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">Can student pay the Fee as instalment..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Yes.. Students are getting the facility for instalments
+      .</p>
+  </div>
+</div>
+<!-- FAQ Question 12-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">Can student do PhD after the MBA ?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">100 % Student can do the PhD after the MBA and It’s a AICTE Approved MBA .</p>
+  </div>
+</div>
+<!-- FAQ Question 13-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">After reserving the seats, can student pay the fee after getting job ..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">No,  After joining the course student will be guided for Placement & if they are   
+      unable to crack the interaction will be supported through Intensive training for    
+      getting placed 
+
+</p>
+  </div>
+</div>
+<!-- FAQ Question 14-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">
+      Can the student get specialisation based job..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Institution will give the opportunities for the same students have to crack it</p>
+  </div>
+</div>
+<!-- FAQ Question 15-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">What will be the salary range as a fresher student can expect..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">2.16 to 3 Lakhs per annum
+</p>
+  </div>
+</div>
+<!-- FAQ Question 16-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">
+      What is the job opportunity a Hindi speaking student can get..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Eduworld will be providing intensive training for the 1<sup>st</sup> 3 to 4 months  for developing the              
+      overall development including communication to get good opportunities in the industry 
+</p>
+  </div>
+</div>
+<!-- FAQ Question 17-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">After the enrolment, will student get job immediately..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Opportunities will be provided and Assisted for the placement from Eduworld side.</p>
+  </div>
+</div>
+<!-- FAQ Question 18-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">How much will be for food and Accommodation?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">6k to 10 k per month
+    </p>
+  </div>
+</div>
+<!-- FAQ Question 19-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">Any possibilities to do online..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">We cannot give job guarantee if it online</p>
+  </div>
+</div>
+<!-- FAQ Question 20-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">⁠Is attendance Mandatory..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Yes. Attendance is Mandatory
+    </p>
+  </div>
+</div>
+<!-- FAQ Question 21-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">Which University MBA student is getting..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Bangalore University</p>
+  </div>
+</div>
+<!-- FAQ Question 22-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">⁠What is the college name..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Academic Delivery will be through St Xaviers College, Bangalore
+    </p>
+  </div>
+</div>
+<!-- FAQ Question 23-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">How many credits professional MBA has..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">110-115</p>
+  </div>
+</div>
+<!-- FAQ Question 24-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">Any specialisation students can choose irrespective of number of students opted..?
+
+    </h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Yes.
+    </p>
+  </div>
+</div>
+
+<!-- FAQ Question 25-->
+<div class="faq-row">
+  <div class="faq-box">
+    <h3 class="faq-question">What are the Teaching Pedagogy for Professional MBA..?</h3>
+    <span class="faq-toggle">&#x25BC;</span>
+    <p class="faq-answer">Case Studies, Role play & Simulations, Group Discussions and Debates, Problem Based Learning, Seminars,
+       Workshops,
+       Guest Lectures, Field visits, Research and Paper Presentations etc..</p>
+  </div>
+</div>
+
+
+       
+      </div>
+
+
+  </section>
+  
+  <section class="image-carousel-section" style="background-color: #ffc107;">
+    <h2 class="section-heading">Placements</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <div class="grid-item"><img src="assets/images/accenture.jpg" alt="Accenture"></div>
+        <div class="grid-item"><img src="assets/images/axis.png" alt="Axis Bank"></div>
+        <div class="grid-item"><img src="assets/images/cardberry.png" alt="Cadbury"></div>
+        <div class="grid-item"><img src="assets/images/cocacola.png" alt="Coca-Cola"></div>
+        <div class="grid-item"><img src="assets/images/Dell_Logo.svg.png" alt="Dell"></div>
+        <div class="grid-item"><img src="assets/images/godrej.png" alt="Godrej"></div>
+        <div class="grid-item"><img src="assets/images/infosys.png" alt="Infosys"></div>
+        <div class="grid-item"><img src="assets/images/idfc.png" alt="IDFC"></div>
+        <div class="grid-item"><img src="assets/images/ey.webp" alt="Reliance"></div>
+        <div class="grid-item"><img src="assets/images/larsen.png" alt="L&T"></div>
+        <div class="grid-item"><img src="assets/images/jpmorgan.png" alt="JP"></div>
+        <div class="grid-item"><img src="assets/images/icici.webp" alt="Domino's"></div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <footer class="footer-section">
+    <p class="footer-text">
+      Eduworld # 4B 4th Floor Lavelle Mansion Lavelle Road Bangalore 560001
+    </p>
+    <p class="footer-text">
+      ©  Copyright 2025 Eduworld | All Rights Reserved.
+    </p>
+  </footer>
+  
+  
+  
+
+  
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,783 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Header Section */
+  .header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    width: 500px;
+    height: auto;
+  }
+  
+  .header-content {
+    flex: 2;
+    text-align: right;
+  }
+  
+  .header-content p {
+    margin: 5px 0;
+    color: #131212;
+    font-size: 22px;
+  }
+  
+  .header-content p strong {
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+  }
+
+
+
+  .earn-learn-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff7f00; /* Orange background for visibility */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for the Link */
+.earn-learn-link:hover {
+    background-color: #FFC107; /* Darker shade of orange */
+    color: #000;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+.dynamic-background {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+  padding: 20px; /* Add padding for smaller screens */
+  flex-wrap: wrap; /* Allow content to stack on smaller screens */
+}
+
+.content-wrapper {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark transparent background */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  max-width: 500px;
+  position: relative; /* Changed to relative for better responsiveness */
+  margin-bottom: 20px; /* Add margin for spacing in smaller screens */
+}
+
+.left-content {
+  color: white;
+  text-align: left;
+}
+
+.mba-title {
+  font-size: 60px; /* Reduce size for smaller screens */
+  color: yellow;
+}
+
+.learn-tagline {
+  font-size: 20px; /* Adjust size for smaller screens */
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.salary-tagline {
+  font-size: 16px; /* Adjust size for smaller screens */
+  margin-top: 5px;
+  color: yellow;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center; /* Center content for smaller screens */
+  align-items: flex-start; /* Align to the top for better stacking */
+  flex-wrap: wrap; /* Allow content to wrap for smaller screens */
+  height: auto; /* Remove fixed height for better flexibility */
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.right-form {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  align-items: center;
+  margin-bottom: 20px; /* Add spacing if needed */
+  padding-right: 20px; /* Add padding to push the form inward */
+}
+
+.form-container {
+  background-color: rgba(232, 124, 9, 0.9); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width: 90%; /* Adjust width for smaller screens */
+  max-width: 400px; /* Limit width for larger screens */
+  text-align: center;
+  margin: 0; /* Remove auto-centering */
+}
+
+
+form input, form select, form button {
+  width: 100%; /* Full width for form elements */
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input::placeholder, form select {
+  color: #555; /* Placeholder and select text color */
+}
+
+form .submit-button {
+  background-color: #000; /* Black button */
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form .submit-button:hover {
+  background-color: #333; /* Darker black on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .form-container {
+      padding: 15px; /* Reduce padding for smaller screens */
+      width: 95%; /* Increase width to occupy more space */
+  }
+
+  form input, form select, form button {
+      font-size: 14px; /* Adjust font size for smaller devices */
+      padding: 8px; /* Reduce padding for better fit */
+  }
+
+  .form-container h2 {
+      font-size: 18px; /* Adjust heading size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+      padding: 10px; /* Further reduce padding for very small screens */
+  }
+
+  form input, form select, form button {
+      font-size: 12px; /* Further adjust font size */
+      padding: 6px; /* Reduce padding for compact appearance */
+  }
+
+  .form-container h2 {
+      font-size: 16px; /* Further adjust heading size */
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dynamic-background {
+      flex-direction: column; /* Stack content vertically */
+      padding: 10px;
+  }
+
+  .content-wrapper {
+      margin-bottom: 20px;
+      text-align: center; /* Center-align content for smaller screens */
+  }
+
+  .mba-title {
+      font-size: 40px; /* Further reduce title size */
+  }
+
+  .learn-tagline {
+      font-size: 18px;
+  }
+
+  .salary-tagline {
+      font-size: 14px;
+  }
+
+  
+}
+
+  
+
+  /* Info Section Styling */
+.info-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .info-box {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    height: 200px;
+    
+  }
+  
+  .info-box.blue {
+    background-color: #007bff;
+  }
+  
+  .info-box.yellow {
+    background-color: #d78707;
+    color: white;
+  }
+  
+  .info-box.orange {
+    background-color: #e07824;
+  }
+  
+  /* Button Styling */
+  .arrow-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: right;
+  }
+  
+  /* Popup Styling */
+  /* Popup Styling */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure popup is on top of all other elements */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px; /* Limit the width for better visuals */
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+.popup-content .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333; /* Ensure visibility */
+}
+
+/* Disable scrolling when popup is active */
+body.no-scroll {
+  overflow: hidden;
+}
+
+  
+  .info-box .icon img {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px; /* Ensure icons maintain aspect ratio */
+    margin-bottom: 10px; /* Add spacing below the icon */
+    align-items: right;
+  }
+  .career-list {
+    display: flex; /* Arrange lists in a row */
+    gap: 30px; /* Add spacing between columns */
+    justify-content: left; /* Center-align the list */
+    color: #333;
+  }
+  
+  .career-list ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+  }
+  
+  .career-list li {
+    font-size: 1rem; /* Adjust font size */
+    margin-bottom: 10px; /* Add space between items */
+  }
+
+
+/* Section Background */
+.program-concepts {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  background-color: #fff8dc; /* Light yellow variant */
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Left Section */
+.concept-left {
+  flex: 1;
+  min-width: 300px; /* Ensure minimum width for small screens */
+  position: relative;
+}
+
+.concept-left h2 {
+  font-size: 1.8rem;
+  color: black;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.concept-left h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: orange;
+}
+
+.orange-box {
+  background-color: #FFC107;
+  color: black;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.orange-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 10%;
+}
+
+.orange-box li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.left-overlap-image {
+  width: 100%;
+  height: auto;
+  margin-top: -4px; /* Overlap effect */
+  z-index: 2;
+  position: relative;
+}
+
+/* Right Section */
+.concept-right {
+  flex: 1;
+  min-width: 300px; /* Ensure minimum width for small screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-top-image {
+  width: 100%; /* Make it fully responsive */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.international-progression {
+  margin-bottom: 20px;
+}
+
+.international-progression h2 {
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.international-progression h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: orange;
+}
+
+.progression-icons {
+  display: flex;
+  flex-wrap: wrap; /* Wrap icons for smaller screens */
+  gap: 10px; /* Reduce gap for small screens */
+  justify-content: center; /* Center icons */
+}
+
+.progression-icons img {
+  width: 80px; /* Adjust size for smaller screens */
+  height: auto;
+}
+
+/* Blue Box */
+.blue-box {
+  background-color: rgb(12, 12, 207);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 3;
+  margin-top: -40px; /* Overlap with left image */
+}
+
+.blue-box ul {
+  margin-left: 10%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.blue-box li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .program-concepts {
+      flex-direction: column; /* Stack sections vertically */
+      padding: 10px; /* Reduce padding */
+  }
+
+  .concept-left,
+  .concept-right {
+      min-width: 100%; /* Take full width */
+  }
+
+  .progression-icons img {
+      width: 60px; /* Smaller size for icons */
+  }
+
+  .blue-box,
+  .orange-box {
+      margin-top: 10px; /* Adjust spacing for stacked layout */
+  }
+}
+
+@media (max-width: 480px) {
+  .concept-left h2, .international-progression h2 {
+      font-size: 1.2rem; /* Reduce heading size */
+  }
+
+  .orange-box li, .blue-box li {
+      font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .progression-icons img {
+      width: 50px; /* Further reduce icon size */
+  }
+}
+
+  
+
+
+
+  /*bbbb*/
+
+  .white-background-section {
+    background-color: white; /* White background */
+    padding: 50px 20px; /* Padding for spacing */
+    text-align: center; /* Center the content */
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+    color: #333;
+    position: relative;
+    display: inline-block; /* For the underline effect */
+  }
+  
+  .section-heading::after {
+    content: "";
+    position: absolute;
+    width: 50px; /* Orange underline width */
+    height: 3px; /* Orange underline thickness */
+    background-color: #ff7f00; /* Orange color */
+    bottom: -10px; /* Position the underline slightly below the heading */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .image-container {
+    margin-top: 30px;
+  }
+  
+  .centered-image {
+    width: 100%; /* Increased width to 100% */
+    max-width: 1000px; /* Optional: limits image size to 1000px */
+    height: auto;
+  }
+  /* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* White Background Section */
+  .white-background-section {
+    background-color: white; /* White background */
+    padding: 50px 20px; /* Padding for spacing */
+    text-align: center; /* Center the content */
+  }
+  
+  /* Heading Styling */
+  .section-heading {
+    font-size: 2rem;
+    color: #333;
+    position: relative;
+    display: inline-block; /* For the underline effect */
+    margin-bottom: 20px;
+  }
+  
+  /* Orange Underline */
+  .section-heading::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: #ff7f00;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Image Container */
+  .image-container {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  
+  /* Centered Image - Responsive */
+  .centered-image {
+    width: 100%; /* Full width of the container */
+    max-width: 1000px; /* Limits maximum image size */
+    height: auto;
+  }
+  
+  /* Mobile Responsiveness: For small devices */
+  @media (max-width: 767px) {
+    .section-heading {
+      font-size: 1.5rem; /* Smaller heading size for mobile */
+    }
+  
+    .centered-image {
+      width: 90%; /* Make image take up more width on mobile */
+      max-width: 100%; /* Allow image to be responsive on mobile */
+    }
+  
+    .white-background-section {
+      padding: 30px 10px; /* Reduce padding on smaller screens */
+    }
+
+    .header-nav ul {
+      flex-direction: column;
+      margin-top: 15px;
+      text-align: right;
+  }
+
+  .header-nav ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+  }
+  }
+  
+  /* Tablet Responsiveness: For medium devices */
+  @media (max-width: 1024px) {
+    .section-heading {
+      font-size: 1.75rem; /* Slightly smaller heading size for tablets */
+    }
+  
+    .centered-image {
+      width: 90%; /* Ensure image takes up a reasonable width on tablets */
+      max-width: 100%; /* Maintain responsiveness */
+    }
+  }
+  
+  /* Desktop and larger screens: Default styling for larger screens */
+  @media (min-width: 1025px) {
+    .section-heading {
+      font-size: 2.5rem; /* Larger heading size for desktops */
+    }
+  
+    .centered-image {
+      width: 80%; /* Restrict image width on larger screens */
+      max-width: 1000px;
+    }
+  }
+  .courses-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    grid-template-rows: repeat(2, auto) 1fr; /* Adds extra space after the 6 boxes */
+  }
+  
+  .course-box {
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .course-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .course-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .course-link:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Different course box colors */
+  .course-color-1 { background-color: #ff2727; }
+  .course-color-2 { background-color: #FFC107; }
+  .course-color-3 { background-color: #453ef4; }
+  .course-color-4 { background-color: #9e0694; }
+  .course-color-5 { background-color: #aa0c16; }
+  .course-color-6 { background-color: #1a9909; }
+  .course-color-7 { background-color: #1a9909; }
+  .course-color-8 { background-color: #FFC107; }
+  .course-color-9 { background-color: #ff2727; }
+  
+  @media (max-width: 768px) {
+    .courses-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .courses-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+
+
+  .footer-section {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center align text */
+    padding: 20px 10px; /* Padding for spacing */
+    font-size: 1rem; /* Font size */
+  }
+  
+  .footer-text {
+    margin: 5px 0; /* Space between lines */
+    line-height: 1.5; /* Better readability */
+  }
+  
+
+  /* Ensure responsive scaling */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; /* Adjust base font size if necessary */
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  header nav ul li {
+      margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      font-size: 14px; /* Slightly smaller font size for narrow screens */
+  }
+
+  header {
+      padding: 0.5rem 0;
+  }
+
+  section {
+      padding: 1rem;
+  }
+}

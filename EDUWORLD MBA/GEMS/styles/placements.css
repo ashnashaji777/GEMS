@@ -1,0 +1,81 @@
+.image-carousel-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .section-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-wrapper {
+    overflow: hidden; /* Hide the overflowing content */
+    width: 100%;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 20px; /* Add space between logos */
+    animation: scroll 40s linear infinite; /* Smooth scrolling effect */
+  }
+  
+  .grid-item {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grid-item img {
+    width: 80%; /* Adjust image size for better fit */
+    height: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Duplicate logos for seamless scrolling */
+  .carousel::after {
+    content: "";
+    display: flex;
+    gap: 20px;
+    transform: translateX(0);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .section-heading {
+      font-size: 20px;
+    }
+  
+    .grid-item {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-heading {
+      font-size: 18px;
+    }
+  
+    .grid-item {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
