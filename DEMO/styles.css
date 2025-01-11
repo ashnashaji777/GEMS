@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+  
+  .landing-section {
+    position: relative;
+    background: url('try.png') no-repeat center center/cover;
+    height: 120vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .center-content {
+    text-align: center;
+    max-width: 800px;
+    margin-left: 5%;
+  }
+  
+  .center-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .center-content h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  .center-content p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .form-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 5%;
+  }
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select,
+  button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+  }
+  
+  button {
+    background: #2a15b3;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background: #ffc107;
+    color: black;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .landing-section {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .center-content,
+    .form-container {
+      margin: 20px auto;
+    }
+  
+    .center-content h1 {
+      font-size: 2rem;
+    }
+  
+    .center-content h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

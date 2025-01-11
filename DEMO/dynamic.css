@@ -1,0 +1,67 @@
+/* Section styling */
+.dynamic-section {
+    background: linear-gradient(to bottom, #345aa4, #ffffff); /* Blue and white gradient */
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Section heading */
+.section-heading h2 {
+    font-size: 34px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    font-size: 20px;
+    font-weight: bo;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Box container (arranges boxes in two rows) */
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two boxes per row */
+    gap: 20px; /* Space between boxes */
+    justify-items: center;
+}
+
+/* Individual box styling */
+.box {
+    background-color: #f1f1f1; /* Light gray background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for bulging effect */
+    width: 300px; /* Fixed width */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Box heading styling */
+.box h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Box description styling */
+.box p {
+    font-size: 16px;
+    color: black;
+}
+
+/* Hover effect for bulging effect */
+.box:hover {
+    transform: translateY(-10px); /* Moves the box upwards */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Increases shadow on hover */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .box-container {
+        grid-template-columns: 1fr; /* One box per row on smaller screens */
+    }
+}

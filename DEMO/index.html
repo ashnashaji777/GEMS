@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eduworld Franchise Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="heder.css">
+  <link rel="stylesheet" href="next.css">
+  <link rel="stylesheet" href="feature.css">
+  <link rel="stylesheet" href="dynamic.css">
+
+
+
+</head>
+<section>
+
+    <header>
+        <div class="logo">
+            <img src="EDUWORLD LOGO_page-0001.jpg" alt="Eduworld Logo"> <!-- Replace with your logo -->
+        </div>
+        <div class="heading">
+            
+           
+        </div>
+       <!--<nav>
+           
+        </nav>--> 
+    </header>
+  <div class="landing-section">
+    <!-- Content Center -->
+    <div class="center-content">
+      <p>Join Us As An Owner of the No 1 Education Business</p>
+      <h1> Welcome to Eduworld!</h1>
+      <p> Fulfil the Dream of 1000's With Lakh of Income in Your Hand.</p>
+    </div>
+
+    <!-- Registration Form -->
+    <div class="form-container">
+      <h2>Join hands with the Top Education Franchise in India Earn More than 20 Lakh/ Year.</h2>
+      <form id="registrationForm">
+        <label for="name">Name <span>*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email <span>*</span></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="mobile">Phone No <span>*</span></label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required pattern="[0-9]{10}">
+        <label for="state">Select State <span>*</span></label>
+        <select id="state" name="state" required onchange="updateCities()">
+          <option value="">-- Select State --</option>
+          <option value="andhra-pradesh">Andhra Pradesh</option>
+          <option value="arunachal-pradesh">Arunachal Pradesh</option>
+          <option value="assam">Assam</option>
+          <option value="bihar">Bihar</option>
+          <option value="chhattisgarh">Chhattisgarh</option>
+          <option value="goa">Goa</option>
+          <option value="gujarat">Gujarat</option>
+          <option value="haryana">Haryana</option>
+          <option value="himachal-pradesh">Himachal Pradesh</option>
+          <option value="jharkhand">Jharkhand</option>
+          <option value="karnataka">Karnataka</option>
+          <option value="kerala">Kerala</option>
+          <option value="madhya-pradesh">Madhya Pradesh</option>
+          <option value="maharashtra">Maharashtra</option>
+          <option value="manipur">Manipur</option>
+          <option value="meghalaya">Meghalaya</option>
+          <option value="mizoram">Mizoram</option>
+          <option value="nagaland">Nagaland</option>
+          <option value="odisha">Odisha</option>
+          <option value="punjab">Punjab</option>
+          <option value="rajasthan">Rajasthan</option>
+          <option value="sikkim">Sikkim</option>
+          <option value="tamil-nadu">Tamil Nadu</option>
+          <option value="telangana">Telangana</option>
+          <option value="tripura">Tripura</option>
+          <option value="uttar-pradesh">Uttar Pradesh</option>
+          <option value="uttarakhand">Uttarakhand</option>
+          <option value="west-bengal">West Bengal</option>
+        </select>
+        
+        <label for="city">Select City<span>*</span></label>
+        <select id="city" name="city" required>
+          <option value="">--Select a City--</option>
+        </select>
+        
+        <script>
+        const stateCities = {
+          "andhra-pradesh": [
+        "Visakhapatnam", "Vijayawada", "Guntur", "Nellore", "Tirupati", 
+        "Kurnool", "Rajahmundry", "Kadapa", "Srikakulam", "Chittoor",
+        "Eluru", "Ongole", "Machilipatnam", "Anantapur", "Proddatur"
+    ],
+    "arunachal-pradesh": [
+        "Itanagar", "Naharlagun", "Pasighat", "Tawang", "Bomdila", 
+        "Ziro", "Roing", "Tezu", "Along", "Daporijo"
+    ],
+    "assam": [
+        "Guwahati", "Silchar", "Dibrugarh", "Jorhat", "Tinsukia", 
+        "Tezpur", "Nagaon", "Dhubri", "Barpeta", "Goalpara"
+    ],
+    "bihar": [
+        "Patna", "Gaya", "Bhagalpur", "Muzaffarpur", "Darbhanga", 
+        "Purnia", "Begusarai", "Arrah", "Katihar", "Munger"
+    ],
+    "chhattisgarh": [
+        "Raipur", "Bilaspur", "Durg", "Korba", "Rajnandgaon", 
+        "Jagdalpur", "Raigarh", "Ambikapur", "Dhamtari", "Mahasamund"
+    ],
+    "goa": [
+        "Panaji", "Margao", "Vasco da Gama", "Mapusa", "Ponda", 
+        "Bicholim", "Canacona", "Sanquelim", "Tiswadi", "Mormugao"
+    ],
+    "gujarat": [
+        "Ahmedabad", "Surat", "Vadodara", "Rajkot", "Gandhinagar", 
+        "Bhavnagar", "Jamnagar", "Junagadh", "Porbandar", "Surendranagar"
+    ],
+    "haryana": [
+        "Gurgaon", "Faridabad", "Panipat", "Ambala", "Karnal", 
+        "Hisar", "Sonipat", "Rohtak", "Panchkula", "Yamunanagar"
+    ],
+    "himachal-pradesh": [
+        "Shimla", "Manali", "Dharamshala", "Kullu", "Mandi", 
+        "Solan", "Chamba", "Hamirpur", "Bilaspur", "Nahan"
+    ],
+    "jharkhand": [
+        "Ranchi", "Jamshedpur", "Dhanbad", "Bokaro", "Deoghar", 
+        "Hazaribagh", "Giridih", "Ramgarh", "Chaibasa", "Dumka"
+    ],
+    "karnataka": [
+        "Bengaluru", "Mysuru", "Hubballi", "Mangaluru", "Belagavi", 
+        "Davangere", "Ballari", "Vijayapura", "Shivamogga", "Tumakuru"
+    ],
+    "kerala": [
+        "Thiruvananthapuram", "Kochi", "Kozhikode", "Thrissur", "Kollam", 
+        "Alappuzha", "Palakkad", "Kannur", "Malappuram", "Pathanamthitta","Kottayam","Idukki","Eranakulam","Vayanad","Kasaragod"
+    ],
+    "madhya-pradesh": [
+        "Bhopal", "Indore", "Gwalior", "Jabalpur", "Ujjain", 
+        "Sagar", "Rewa", "Ratlam", "Satna", "Chhindwara"
+    ],
+    "maharashtra": [
+        "Mumbai", "Pune", "Nagpur", "Nashik", "Aurangabad", 
+        "Thane", "Solapur", "Amravati", "Kolhapur", "Sangli"
+    ],
+    "manipur": [
+        "Imphal", "Churachandpur", "Thoubal", "Kakching", "Bishnupur", 
+        "Senapati", "Ukhrul", "Moreh", "Tamenglong", "Jiribam"
+    ],
+    "meghalaya": [
+        "Shillong", "Tura", "Jowai", "Nongpoh", "Williamnagar", 
+        "Baghmara", "Nongstoin", "Mairang", "Cherrapunji", "Mawkyrwat"
+    ],
+    "mizoram": [
+        "Aizawl", "Lunglei", "Serchhip", "Champhai", "Kolasib", 
+        "Saiha", "Lawngtlai", "Mamit", "Bairabi", "Vairengte"
+    ],
+    "nagaland": [
+        "Kohima", "Dimapur", "Mokokchung", "Wokha", "Tuensang", 
+        "Zunheboto", "Mon", "Phek", "Longleng", "Kiphire"
+    ],
+    "odisha": [
+        "Bhubaneswar", "Cuttack", "Rourkela", "Puri", "Sambalpur", 
+        "Berhampur", "Balasore", "Baripada", "Bhadrak", "Jeypore"
+    ],
+    "punjab": [
+        "Chandigarh", "Amritsar", "Ludhiana", "Jalandhar", "Patiala", 
+        "Bathinda", "Hoshiarpur", "Mohali", "Moga", "Pathankot"
+    ],
+    "rajasthan": [
+        "Jaipur", "Udaipur", "Jodhpur", "Kota", "Bikaner", 
+        "Ajmer", "Alwar", "Bharatpur", "Pali", "Sikar"
+    ],
+    "sikkim": [
+        "Gangtok", "Namchi", "Pelling", "Mangan", "Rangpo", 
+        "Gyalshing", "Ravangla", "Yuksom", "Singtam", "Jorethang"
+    ],
+    "tamil-nadu": [
+        "Chennai", "Coimbatore", "Madurai", "Tiruchirapalli", "Salem", 
+        "Erode", "Tiruppur", "Vellore", "Thoothukudi", "Dindigul"
+    ],
+    "telangana": [
+        "Hyderabad", "Warangal", "Nizamabad", "Khammam", "Karimnagar", 
+        "Ramagundam", "Mahabubnagar", "Siddipet", "Adilabad", "Suryapet"
+    ],
+    "tripura": [
+        "Agartala", "Dharmanagar", "Kailasahar", "Udaipur", "Amarpur", 
+        "Khowai", "Belonia", "Teliamura", "Sonamura", "Sabroom"
+    ],
+    "uttar-pradesh": [
+        "Lucknow", "Kanpur", "Varanasi", "Agra", "Allahabad", 
+        "Meerut", "Ghaziabad", "Bareilly", "Aligarh", "Moradabad"
+    ],
+    "uttarakhand": [
+        "Dehradun", "Nainital", "Haridwar", "Rishikesh", "Haldwani", 
+        "Rudrapur", "Kashipur", "Mussoorie", "Roorkee", "Pithoragarh"
+    ],
+    "west-bengal": [
+        "Kolkata", "Darjeeling", "Siliguri", "Asansol", "Durgapur", 
+        "Howrah", "Kharagpur", "Bardhaman", "Malda", "Jalpaiguri"
+    ]
+          // Add other states and their cities
+        };
+        
+        function updateCities() {
+          const state = document.getElementById("state").value;
+          const citySelect = document.getElementById("city");
+          citySelect.innerHTML = `<option value="">Select a City</option>`; // Clear previous cities
+        
+          if (state && stateCities[state]) {
+            stateCities[state].forEach((city) => {
+              const option = document.createElement("option");
+              option.value = city.toLowerCase().replace(/\s+/g, "-");
+              option.textContent = city;
+              citySelect.appendChild(option);
+            });
+          }
+        }
+        </script>
+        
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</section>
+
+<section class="highlight-section">
+    <div class="highlight-left">
+        <h2>Partner with India’s 
+            Leading Educational 
+            Service Provider
+            </h2>
+        <p>
+            Join the Fastest- Growing Franchise network in
+            India & Turn you passion into a thriving business
+            While empowering your people
+            
+        </p>
+        <button class="cta-button" style="width: 50%;">Take the 1st Step Now</button>
+    </div>
+    <div class="highlight-right">
+        <img src="next.png" alt="MBA Program" />
+    </div>
+</section>
+
+<section class="feature-section">
+
+    <div class="feature-heading">
+        <h2>Why Eduworld Franchisee </h2>
+        <p>
+            By Partnering with Eduworld you ‘ll become a part of Leading Education Business Ecosystem that will fulfil the Dream , 
+            Career & Ambitions of 1000 of Students. Students are the future of our Nation & Eduworld committed to do the support to them . 
+            You will be able to support students to all area of specialisations including<br><br>
+            <b>TOP RANKED COLLEGES AND UNIVERSITIES IN INDIA AND ABROAD</b><br> 
+            
+        </p><br>
+        <ul class="feature-list">
+            <li>MEDICAL</li>
+            <li>MANAGEMENT</li>
+            <li>IT</li>
+            <li>ENGINEERING</li>
+            <li>LAW</li>
+            <li>SCIENCE</li>
+            <li>ALLIED HEALTH</li>
+            <li>DESIGN</li>
+            <li>PARAMEDICAL</li>
+        </ul>
+        
+    </div>
+
+    <br><br>
+    <div class="feature-box-container">
+        <div class="feature-box">
+            <h3>Cash Flow</h3>
+            <p>Many of Our Franchisees reach 100 	
+                Enrolments and generate up to 10 Lakh 			
+                within just 6 months 
+                </p>
+        </div>
+        <div class="feature-box">
+            <h3>High ROI</h3>
+            <p>Experience the return of 40 % to 50 %</p>
+        </div>
+        <div class="feature-box">
+            <h3>Recession Proof</h3>
+            <p>Capitalize on a Business that’s built to 
+                Withstand with all economic crises 
+                </p>
+        </div>
+        <div class="feature-box">
+            <h3>Mandatory for all </h3>
+            <p>The Service required for Every 
+            Indian Student in all level of life
+                .</p>
+        </div>
+    </div>
+   
+</section>
+
+<section class="investment-section">
+    <div class="investment-heading">
+        <h2>Are you our Next Franchise partner</h2>
+        <p>We are seeking entrepreneurs who are passionate of making wealth in their life and fulfil all the ambitions . Eduworld offers a 
+            low-risk high-reward opportunity for you to
+             make meaningful impact while achieving financial independence </p>
+    </div>
+
+    <div class="investment-box">
+        <div class="investment-row">
+            <p><strong>Investment</strong></p>
+            <div class="vertical-line"></div>
+            <p><strong>Area Required</strong></p>
+            <div class="vertical-line"></div>
+            <p><strong>ROI</strong></p>
+        </div>
+        <div class="investment-row">
+            <p>3 Lakh</p>
+            <p>500 – 1000 Sq. Ft</p>
+            <p>40 to 80%</p>
+        </div>
+    </div>
+
+
+    
+</section>
+
+<section class="dynamic-section">
+    <div class="section-heading">
+        <h2>What Support will you receive </h2>
+        <p>We provide comprehensive support to ensure your success.</p>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <h3>Institutional Database</h3>
+            <p>Will be Providing University & Colleges Databases in National & International Level</p>
+        </div>
+        <div class="box">
+            <h3>Courses Database</h3>
+            <p>Will be Providing latest Courses Databases according to latest demand & trends.
+
+            </p>
+        </div>
+        <div class="box">
+            <h3>Frames Works</h3>
+            <p>Providing multiple Frame Works to handle different methods of counselling. </p>
+        </div>
+        <div class="box">
+            <h3>Training & Marketing Support </h3>
+            <p>Receive comprehensive training & ongoing marketing support to help branch.</p>
+        </div>
+    </div>
+</section>
+
+<section class="strength-section" id="strength-section">
+    <div class="strength-content">
+        <h1 id="strength-heading">Our Major Strength</h1>
+        <p id="strength-paragraph">
+            Exclusive Capability to reach India’s Top Ranked Colleges and Universities in All Sectors.
+            Representing more than 185 Colleges and Universities in India and Abroad.
+        </p>
+        <div id="strength-dynamic-list"></div> <!-- Placeholder for additional dynamic content -->
+    </div>
+</section>
+
+
+
+<footer class="footer-section">
+    <p class="footer-text">
+      Eduworld # 4B 4th Floor Lavelle Mansion Lavelle Road Bangalore 560001
+    </p>
+    <p class="footer-text">
+      ©  Copyright 2025 Eduworld | All Rights Reserved.
+    </p>
+  </footer>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

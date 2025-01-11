@@ -1,0 +1,87 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #ffffff; /* White background */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+   /* padding: 10px 20px;*/
+    border-bottom: 3px solid #ddd;
+}
+
+header .logo img {
+    max-width: 90%; /* Ensure logo scales properly */
+    height: auto;
+    max-width: 500px; /* Suitable width for the logo */
+    /*margin-bottom: 2px;  Add spacing below the logo */
+    max-height: 300px;
+    
+}
+
+
+/* Heading Styling 
+header .heading {
+    text-align: center;
+    margin: 10px 0;
+}*/
+/*
+header .heading h1 {
+    font-size: 45px;
+    color: red;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    /* Center the heading and adjust for small screen */
+    header .heading h1 {
+        font-size: 24px;
+    }
+
+    header .logo img {
+        max-width: 100px; /* Reduce logo size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .heading h1 {
+        font-size: 18px;
+    }
+
+    header .logo img {
+        max-width: 80px; /* Smaller logo for very small screens */
+    }
+}
+
+
+
+
+.footer-section {
+    /*background: linear-gradient(135deg,rgb(153, 24, 24), #add8e6, #ffffff, #add8e6,rgb(153, 24, 24)); /* Gradient from light blue to white */
+    background-color: #f5f5f5;
+    color: #0d1381; /* Adjust text color for better contrast */
+    text-align: center; /* Center align text */
+    padding: 20px 10px; /* Padding for spacing */
+    font-size: 1rem; /* Font size */
+}
+
+.footer-text {
+    margin: 5px 0; /* Space between lines */
+    line-height: 1.5; /* Better readability */
+    font-weight: bold;
+
+}
