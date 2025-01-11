@@ -1,0 +1,327 @@
+/* Container for the image section */
+.image-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Default height, will adjust on smaller screens */
+    background-image: url('assets/images/learn.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the full container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+}
+
+/* Text overlay on the image */
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text */
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    z-index: 2;
+}
+
+/* Heading and paragraph styling */
+.image-text h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.image-text p {
+    font-size: 18px;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .image-section {
+        height: 300px; /* Reduce the height for smaller screens */
+    }
+
+    .image-text h1 {
+        font-size: 28px; /* Smaller heading on mobile */
+    }
+
+    .image-text p {
+        font-size: 16px; /* Smaller paragraph on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-section {
+        height: 250px; /* Further reduce height for very small screens */
+    }
+
+    .image-text h1 {
+        font-size: 24px; /* Even smaller heading for very small screens */
+    }
+
+    .image-text p {
+        font-size: 14px; /* Smaller paragraph for small screens */
+    }
+}
+
+
+/* Light gray background section */
+.mba-program {
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 50px 20px;
+}
+
+/* Center content with proper spacing */
+.mba-program .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading styling */
+.mba-program h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px; /* Adjust the space between the text and the underline */
+    text-align: center;
+    position: relative; /* To position the underline */
+}
+
+
+
+
+/* Paragraph styling */
+.mba-program p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .mba-program h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    .mba-program p {
+        font-size: 16px; /* Adjust paragraph size for readability on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .mba-program h2 {
+        font-size: 24px; /* Further reduce font size for very small screens */
+    }
+
+    .mba-program p {
+        font-size: 14px; /* Further adjust paragraph size */
+    }
+}
+
+
+
+/* Styling for the "Why Choose This Program?" section */
+.choose-program {
+    background-color: orange; /* Light orange background */
+    padding: 40px 20px;
+    color: black;
+}
+
+/* Heading styling */
+.choose-program h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* List styling */
+.choose-program ul {
+    list-style-type: disc; /* Bullet symbol for list items */
+    padding-left: 40px; /* Add padding for bullet symbol */
+    margin: 0 auto; /* Center the list */
+    max-width: 1000px; /* Restrict the width of the list */
+}
+
+.choose-program li {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.choose-program li strong {
+    font-weight: bold;
+}
+
+/* Call-to-action paragraph styling */
+.choose-program .cta {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Quote styling */
+.choose-program .quote {
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .choose-program h2 {
+        font-size: 28px;
+    }
+
+    .choose-program li {
+        font-size: 16px;
+    }
+
+    .choose-program .cta {
+        font-size: 18px;
+    }
+
+    .choose-program .quote {
+        font-size: 16px;
+    }
+}
+
+
+/* Program details section styling */
+.program-details {
+    background-color: #f7f7f7; /* Light gray background */
+    padding: 40px 20px;
+}
+
+/* Container for the boxes */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Styling for each box */
+.box {
+    background-color: blue;
+    border-radius: 10px ;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 10px); /* Two boxes per row with some spacing */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Bulging effect on hover */
+.box:hover {
+    transform: translateY(-10px); /* Bulging effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #ffc107;
+    
+}
+
+/* Heading styling inside the boxes */
+.box h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 15px;
+}
+.box:hover h3{
+    color: black;
+}
+.box:hover p{
+    color: black;
+}
+.box:hover ul{
+    color: black;
+}
+
+
+
+/* Paragraph and list inside the boxes */
+.box p, .box ul {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* List styling */
+.box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        width: 100%; /* Stack boxes on smaller screens */
+    }
+}
+
+/* Fee structure section */
+.fee-structure {
+    background-color: #f7f7f7; /* Light gray background */
+    padding: 40px 20px;
+}
+
+/* Heading for the fee structure */
+.fee-structure .section-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.fee-table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Table cell styling */
+.fee-table th, .fee-table td {
+    padding: 15px;
+    border: 2px solid white; /* Yellow border for the table */
+}
+
+/* Table heading styling */
+.fee-table th {
+    background-color: orange; /* Light gray background for header */
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+}
+
+.fee-table td:hover {
+    background-color: #ffc107; /* Light gray background for header */
+    
+    
+}
+/* Table data styling */
+.fee-table td {
+    font-size: 16px;
+    color: black;
+}
+
+
+/* Alternating row colors */
+.fee-table tr:nth-child(odd) {
+    background-color: #d3d3d3; /* Gray color for odd rows */
+}
+
+.fee-table tr:nth-child(even) {
+    background-color: #f0f0f0; /* Light gray color for even rows */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fee-table {
+        width: 100%; /* Ensure the table fits on smaller screens */
+        font-size: 14px; /* Smaller text on mobile devices */
+    }
+}
+
